@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enter My Heart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div id="cursor-trail" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <header class="hero section reveal">
+    <div class="light-leak leak-1"></div>
+    <div class="light-leak leak-2"></div>
+    <div class="hero-content glass">
+      <p class="eyebrow">A cinematic surprise, only for you</p>
+      <h1>For the most beautiful soul in my life…</h1>
+      <p class="subtitle">A little dream I made so your smile can glow even brighter tonight.</p>
+      <div class="hero-actions">
+        <button id="music-toggle" class="btn btn-outline" aria-pressed="false">🎶 Play Our Ambience</button>
+        <a href="#welcome" class="btn btn-primary ripple">Enter My Heart</a>
+      </div>
+    </div>
+    <div class="floating-hearts" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section id="welcome" class="section reveal">
+      <div class="container">
+        <h2>🌸 Welcome, My Love</h2>
+        <p class="type-line" data-text="Every second with you turns ordinary moments into gold."></p>
+        <p class="lead">You are my calm, my spark, my sweetest adventure.</p>
+      </div>
+    </section>
+
+    <section id="story" class="section reveal">
+      <div class="container">
+        <h2>📖 Our Story</h2>
+        <div class="timeline">
+          <article class="timeline-item glow-border"><span>✨ First Hello</span><p>The day I met you, time felt softer.</p></article>
+          <article class="timeline-item glow-border"><span>💫 First Laugh</span><p>Your laughter became my favorite melody.</p></article>
+          <article class="timeline-item glow-border"><span>🌙 First Deep Talk</span><p>In your words, I found home.</p></article>
+          <article class="timeline-item glow-border"><span>💖 Forever Path</span><p>And every day since, I choose you again.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section reveal">
+      <div class="container">
+        <h2>📸 Memory Gallery</h2>
+        <div class="gallery-grid">
+          <button class="memory-card glass" data-full="A thousand tiny moments, one endless love.">Sunset Walk</button>
+          <button class="memory-card glass" data-full="Coffee dates and your sleepy smile.">Morning Warmth</button>
+          <button class="memory-card glass" data-full="Dancing in the room like no one exists.">Midnight Dance</button>
+          <button class="memory-card glass" data-full="Every photo, one more reason I fall for you.">Golden Frame</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="letter" class="section reveal">
+      <div class="container paper">
+        <h2>💕 Love Letter</h2>
+        <p id="love-letter"></p>
+      </div>
+    </section>
+
+    <section id="song" class="section reveal">
+      <div class="container song-card glass glow-border">
+        <h2>🎶 Our Song</h2>
+        <div class="vinyl-wrap">
+          <div class="vinyl"></div>
+          <div class="wave"></div>
+        </div>
+        <p>This song reminds me how your presence makes my heart dance in slow motion.</p>
+      </div>
+    </section>
+
+    <section id="reasons" class="section reveal">
+      <div class="container">
+        <h2>🫶 Reasons I Love You</h2>
+        <div class="flip-grid">
+          <button class="flip-card"><span class="front">Your Kindness</span><span class="back">You love gently, and it heals me.</span></button>
+          <button class="flip-card"><span class="front">Your Eyes</span><span class="back">They feel like poetry.</span></button>
+          <button class="flip-card"><span class="front">Your Strength</span><span class="back">You make hard days softer.</span></button>
+          <button class="flip-card"><span class="front">Your Heart</span><span class="back">It is my favorite place.</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="surprise" class="section reveal">
+      <div class="container center">
+        <h2>🎁 Surprise Interaction</h2>
+        <button id="unlock" class="btn btn-primary">Click to Unlock</button>
+        <p id="secret" hidden>You are the wish my soul made before I met you. 💗</p>
+      </div>
+    </section>
+
+    <section id="quiz" class="section reveal">
+      <div class="container quiz glass">
+        <h2>🧠 Cute Love Quiz</h2>
+        <p id="quiz-question"></p>
+        <div id="quiz-options"></div>
+        <p id="quiz-result"></p>
+      </div>
+    </section>
+
+    <section id="dreams" class="section reveal">
+      <div class="container">
+        <h2>🌟 Future Dreams</h2>
+        <p>Tiny home. Big windows. Soft music. New cities. Shared sunsets. A life where every chapter has us.</p>
+      </div>
+    </section>
+
+    <section id="final" class="section reveal final">
+      <div class="container center">
+        <h2>You are my today, my tomorrow, my forever.</h2>
+        <button id="forever-btn" class="btn btn-primary pulse">Will you always stay with me?</button>
+        <p id="forever-note" hidden>Then let this heart beat for you in every lifetime. 💍</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="glass lightbox-content">
+      <button id="close-lightbox" class="btn btn-outline">Close</button>
+      <p id="lightbox-text"></p>
+    </div>
+  </div>
+
+  <audio id="bg-music" loop preload="none" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8fd1597f0.mp3?filename=romantic-background-music-for-video-9144.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
